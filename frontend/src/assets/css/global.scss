@@ -1,0 +1,151 @@
+/**
+ * 全局样式
+ */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e6edf3;
+  background: #0d1117;
+}
+
+/* 链接样式 */
+a {
+  color: #58a6ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #79c0ff;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* 卡片样式 */
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: #484f58;
+}
+
+/* 按钮样式重置 */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* 输入框样式重置 */
+input, textarea {
+  font-family: inherit;
+}
+
+/* 选择文本样式 */
+::selection {
+  background: rgba(88, 166, 255, 0.2);
+  color: #e6edf3;
+}
+
+/* Element UI 样式覆盖 */
+.el-message {
+  background: #161b22 !important;
+  border: 1px solid #30363d !important;
+  color: #e6edf3 !important;
+}
+
+.el-message--success {
+  background: rgba(35, 134, 54, 0.1) !important;
+  border-color: #238636 !important;
+}
+
+.el-message--warning {
+  background: rgba(187, 128, 9, 0.1) !important;
+  border-color: #bb7909 !important;
+}
+
+.el-message--error {
+  background: rgba(218, 54, 51, 0.1) !important;
+  border-color: #da3633 !important;
+}
+
+.el-dialog {
+  background: #161b22 !important;
+  border: 1px solid #30363d !important;
+}
+
+.el-dialog__title {
+  color: #e6edf3 !important;
+}
+
+.el-dialog__body {
+  color: #8b949e !important;
+}
+
+/* 动画类 */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.3s;
+}
+
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+}
