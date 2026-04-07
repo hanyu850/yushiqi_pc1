@@ -8,19 +8,20 @@ import MainLayout from '@/layouts/MainLayout.vue'
 Vue.use(VueRouter)
 
 const routes = [
+  // 万小智首页 - 独立布局
+  {
+    path: '/',
+    name: 'Home',
+    component: () => import('@/views/Home.vue'),
+    meta: {
+      title: '万小智AI - 一键生成网站，轻松发布上线'
+    }
+  },
   // 需要主布局的页面
   {
     path: '/',
     component: MainLayout,
     children: [
-      {
-        path: '',
-        name: 'Home',
-        component: () => import('@/views/Home.vue'),
-        meta: {
-          title: '羽世奇 AI - 智启未来'
-        }
-      },
       {
         path: 'search',
         name: 'Search',
